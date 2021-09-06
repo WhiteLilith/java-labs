@@ -24,7 +24,7 @@ public class Main
     }
 
     public static void first18thTask(){
-        int[] someArr = {1, 5, 9, 8, 4, 6, 12, 3, 5, 1, 9};
+        int[] someArr = {1, 5, 9, 8, 4, 6, 12, 3, 5, 1, 9, 5};
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 
         for(int i = 0; i < someArr.length; i++){
@@ -55,10 +55,10 @@ public class Main
     }
 
     public static void second14thTask(){
-
+        int[][] matrix = {{1, 2, 3}, {3, 5, 7}, {5, 5, 5}, {7, 7, 7}};
     }
 
     public static void second18thTask(){
-
+        int[][] matrix = {{1, 2, 3}, {3, 5, 7}, {5, 5, 5}, {7, 7, 7}};
     }
 }
