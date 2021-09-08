@@ -6,7 +6,8 @@ import java.util.Map;
 public class Main
 {
     public static void main(String[] args) {
-        first18thTask();
+        //first18thTask();
+        second14thTask();
     }
 
     public static void first14thTask(){
@@ -55,7 +56,33 @@ public class Main
     }
 
     public static void second14thTask(){
-        int[][] matrix = {{1, 2, 3}, {3, 5, 7}, {5, 5, 5}, {7, 7, 7}};
+        int[][] matrix = {{1, 2, 3}, {3, 5, 7}, {5, 5, 5}, {7, 1, 7}};
+        int minSum = Integer.MAX_VALUE;
+        int maxSum = Integer.MIN_VALUE;
+
+        int minSumIndex = -1;
+        int maxSumIndex = -1;
+
+        int sum = 0;
+
+        for (int i = 0; i < matrix.length; i++) {
+            sum = 0;
+            for (int j = 0; j < matrix[0].length; j++) {
+                sum += matrix[i][j];
+            }
+
+            if(minSum > sum){
+                minSumIndex = i;
+                minSum = sum;
+            }
+            if(maxSum < sum){
+                maxSumIndex = i;
+                maxSum = sum;
+            }
+        }
+
+        System.out.println(maxSumIndex + ": " + maxSum);
+        System.out.println(minSumIndex + ": " + minSum);
     }
 
     public static void second18thTask(){
