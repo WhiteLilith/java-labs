@@ -6,8 +6,10 @@ import java.util.Map;
 public class Main
 {
     public static void main(String[] args) {
-        //first18thTask();
+        first14thTask();
+        first18thTask();
         second14thTask();
+        second18thTask();
     }
 
     public static void first14thTask(){
@@ -87,5 +89,36 @@ public class Main
 
     public static void second18thTask(){
         int[][] matrix = {{1, 2, 3}, {3, 5, 7}, {5, 5, 5}, {7, 7, 7}};
+
+        int[] rows = {0, 0, 0, 0};
+        int[] columns = {0, 0, 0, 0};
+
+        int row = 1;
+        int column = 1;
+
+        for(int i = 0; i < matrix.length; i++){
+            row = 1;
+            for (int j = 0; j < matrix[0].length; j++){
+                row *= matrix[i][j];
+            }
+            rows[i] = row;
+        }
+
+        for(int i = 0; i < matrix[0].length; i++){
+            column = 1;
+            for (int j = 0; j < matrix.length; j++){
+                column *= matrix[j][i];
+            }
+            columns[i] = column;
+        }
+
+        for(int i = 0; i < matrix.length; i++){
+            for(int j = 0; j < matrix[0].length; j++){
+                if(rows[i] == columns[j]){
+                    System.out.println(i + " " + j);
+                }
+            }
+        }
+
     }
 }
